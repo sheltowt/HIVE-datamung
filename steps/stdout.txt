@@ -1,0 +1,39 @@
+Downloading 's3://elasticmapreduce/libs/hive/hive-script' to '/mnt/var/lib/hadoop/steps/1/.'
+2013-06-24 22:48:27 GMT - INFO Running: mkdir -p /mnt/var/log/apps
+2013-06-24 22:48:27 GMT - INFO Running: hadoop dfs -mkdir /mnt/var/lib/hadoop/tmp
+2013-06-24 22:48:29 GMT - INFO Running: rm -rf /home/hadoop/hive
+2013-06-24 22:48:29 GMT - INFO Running: hadoop fs -copyToLocal s3://elasticmapreduce/libs/hive/0.8.1.8/hive-0.8.1.8.tar.bz2 /mnt/var/lib/hadoop/steps/1/hive-0.8.1.8.tar.bz2
+2013-06-24 22:49:15 GMT - INFO Running: mkdir -p /home/hadoop/.versions/hive-0.8.1
+2013-06-24 22:49:15 GMT - INFO Running: tar -C /home/hadoop/.versions/hive-0.8.1 -xjf /mnt/var/lib/hadoop/steps/1/hive-0.8.1.8.tar.bz2
+2013-06-24 22:49:25 GMT - INFO Running: echo 0.8.1.8 > /home/hadoop/.versions/hive-0.8.1/version
+2013-06-24 22:49:25 GMT - INFO Running: echo "create database if not exists hive_081 CHARACTER SET = 'latin1';" | mysql -u root
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive at location /home/hadoop/bin/hive-0.8.1
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1 at location /home/hadoop/hive
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive-server-nanny.sh at location /home/hadoop/bin/hive-server-nanny.sh
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive at location /home/hadoop/bin/hive
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive-config.sh at location /home/hadoop/bin/hive-config.sh
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/set-hive-config-variables.sh at location /home/hadoop/bin/set-hive-config-variables.sh
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/ext at location /home/hadoop/bin/ext
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive-server-nanny.sh at location /home/hadoop/bin/hive-server-nanny.sh-0.8.1
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive at location /home/hadoop/bin/hive-0.8.1
+2013-06-24 22:49:25 GMT - INFO Remove old link at /home/hadoop/bin/hive-0.8.1
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/hive-config.sh at location /home/hadoop/bin/hive-config.sh-0.8.1
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/set-hive-config-variables.sh at location /home/hadoop/bin/set-hive-config-variables.sh-0.8.1
+2013-06-24 22:49:25 GMT - INFO Linking to /home/hadoop/.versions/hive-0.8.1/bin/ext at location /home/hadoop/bin/ext-0.8.1
+2013-06-24 22:49:25 GMT - INFO Running: /home/hadoop/.versions/hive-0.8.1/bin/set-hive-config-variables.sh
+2013-06-24 22:49:25 GMT - INFO Installing the server nanny
+2013-06-24 22:49:25 GMT - INFO Running: sudo mv /mnt/tmp/hive-server-nanny /etc/init.d/hive-server-nanny
+2013-06-24 22:49:26 GMT - INFO Running: sudo /etc/init.d/hive-server-nanny restart
+Starting Hive Server Nanny as a daemon....
+2013-06-24 22:49:26 GMT - INFO Running: sudo update-rc.d -f hive-server-nanny remove
+ Removing any system startup links for /etc/init.d/hive-server-nanny ...
+2013-06-24 22:49:26 GMT - INFO Running: sudo update-rc.d hive-server-nanny defaults 40 60
+ Adding system startup for /etc/init.d/hive-server-nanny ...
+   /etc/rc0.d/K60hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc1.d/K60hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc6.d/K60hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc2.d/S40hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc3.d/S40hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc4.d/S40hive-server-nanny -> ../init.d/hive-server-nanny
+   /etc/rc5.d/S40hive-server-nanny -> ../init.d/hive-server-nanny
+2013-06-24 22:49:27 GMT - INFO Running: cp -f  /home/hadoop/.versions/hbase0.92/lib/hbase-0.92.0.jar /home/hadoop/.versions/hive-0.8.1/lib/hbase-0.92.0.jar &&           cp -f /home/hadoop/.versions/hbase0.92/lib/hbase-0.92.0.jar /home/hadoop/.versions/hive-0.8.1/auxlib/hbase-0.92.0.jar

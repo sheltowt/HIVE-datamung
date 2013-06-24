@@ -1,0 +1,9 @@
+mkdir: cannot create directory /mnt/var/lib/hadoop/tmp: File exists
+13/06/24 22:48:32 INFO s3native.NativeS3FileSystem: Opening 's3://elasticmapreduce/libs/hive/0.8.1.8/hive-0.8.1.8.tar.bz2' for reading
++ hive_config=/home/hadoop/.versions/hive-0.8.1/conf/hive-default.xml
+++ hostname
++ master_host=ip-10-114-73-81.ec2.internal
++ sed -i -e 's|${MASTER_HOSTNAME}|ip-10-114-73-81.ec2.internal|g' /home/hadoop/.versions/hive-0.8.1/conf/hive-default.xml
+hive-server-nanny.sh: no process found
+hive-server-nanny.sh: no process found
+Command exiting with ret '0'
